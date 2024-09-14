@@ -1,0 +1,50 @@
+
+
+  nav {
+    background-color: #2fcc59;
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; 
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: darkgreen; 
+}
+
+nav div {
+    margin-top: 10px;
+}
+
+nav div button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 15px;
+    margin: 0 5px; 
+    cursor: pointer;
+}
+
+nav div button:hover {
+    background-color: lightgray; 
+}

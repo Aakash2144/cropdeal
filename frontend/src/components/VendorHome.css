@@ -1,0 +1,27 @@
+.vendor-home {
+    padding: 1rem;
+    background: #ffffff;
+}
+
+.vendor-home h2 {
+    margin-bottom: 1rem;
+}
+
+.vendor-home .overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.vendor-home .card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    flex: 1 1 calc(50% - 1rem);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vendor-home .card h3 {
+    margin-top: 0;
+}
