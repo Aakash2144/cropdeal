@@ -3,6 +3,7 @@
     "contracts": "ठेके",
    
     "contact": "संपर्क",
+    "Create Contract":"एक अनुबंध बनाएं",
     
         "Home": "मुख्य पृष्ठ",
         "Add_crop": "फसल जोड़ें",
@@ -36,8 +37,55 @@
                     "loadingProfile": "प्रोफ़ाइल लोड हो रही है...",
                     "errorFetchingProfile": "प्रोफ़ाइल लाने में त्रुटि। कृपया बाद में पुनः प्रयास करें।",
                     "errorUpdatingProfile": "प्रोफ़ाइल अपडेट करने में विफल। कृपया पुनः प्रयास करें।",
-                    "noCurrentOrders": "कोई वर्तमान आदेश नहीं हैं।"
-                  
+                    "noCurrentOrders": "कोई वर्तमान आदेश नहीं हैं।",
+                    
+                    "Welcome to Your Dashboard": "आपके डैशबोर्ड में आपका स्वागत है",
+
+                        "Manage your crops": "अपनी फसलों का प्रबंधन करें, आदेश देखें और एक ही स्थान पर अपनी इतिहास को ट्रैक करें।",
+                        "Your Crops": "आपकी फसलें",
+                        "Add manage view crops": "अपनी सभी फसलों को एक ही स्थान पर जोड़ें, प्रबंधित करें और देखें।",
+                        "Add Crop": "फसल जोड़ें",
+                        "Your Orders": "आपके आदेश",
+                        "Check manage orders": "विक्रेताओं से सभी आने वाले आदेशों की जाँच करें और प्रबंधित करें।",
+                        "View Orders": "आदेश देखें",
+                        "Order History": "आदेशों का इतिहास",
+                        "View order history": "पूरा किए गए आदेशों और लेनदेन के इतिहास को देखें।",
+                        "View History": "इतिहास देखें",
+                        "Add New Crop" : "नया फसल जोड़ें",
+"Crop Name": "फसल का नाम",
+"Quantity" : "मात्रा",
+"Price" : "मूल्य",
+"Add_Crop" : "फसल जोड़ें",
+"Crop Added" : "फसल जोड़ी गई",
+
+    "Crop History": "फसल का इतिहास",
+    "Planted On": "लगाया गया",
+    "No Crop History": "कोई फसल इतिहास उपलब्ध नहीं है।",
+    "Order History": "आदेशों का इतिहास",
+    "Order ID": "आदेश आईडी",
+    "Status": "स्थिति",
+    "Total": "कुल",
+    "Date": "तारीख",
+    "No Order History": "कोई आदेश इतिहास उपलब्ध नहीं है।",
+    "Loading History": "इतिहास लोड हो रहा है...",
+    
+        "Create_Contract": "अनुबंध बनाएं",
+        "Title": "शीर्षक",
+        "Description": "विवरण",
+        "Terms": "शर्तें",
+        "Start_Date": "आरंभ तिथि",
+        "End_Date": "समाप्ति तिथि",
+        "Amount": "राशि",
+        "Submit": "जमा करें",
+        "Cancel": "रद्द करें",
+        "Contract_Created_Successfully": "अनुबंध सफलतापूर्वक बनाया गया",
+        "Failed_To_Create_Contract": "अनुबंध बनाने में विफल"
+      
+      
+  
+  
+                      
+                      
                   
             
               

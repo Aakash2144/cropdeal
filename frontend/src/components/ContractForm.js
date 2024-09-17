@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import axios from 'axios'; 
+import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 import './ContractForm.css';
+
 const ContractForm = ({ onClose }) => {
+    const { t } = useTranslation();
     const [contract, setContract] = useState({
         title: '',
         description: '',
@@ -22,21 +25,21 @@ const ContractForm = ({ onClose }) => {
         try {
             // Replace with your API endpoint for creating contracts
             await axios.post('/api/contracts', contract);
-            alert('Contract created successfully');
+            alert(t('Contract_Created_Successfully'));
             setContract({ title: '', description: '', terms: '', startDate: '', endDate: '', amount: '' });
             if (onClose) onClose();
         } catch (error) {
             console.error('Error creating contract', error);
-            alert('Failed to create contract');
+            alert(t('Failed_To_Create_Contract'));
         }
     };
 
     return (
         <div className="contract-form">
-            <h2>Create Contract</h2>
+            <h2>{t('Create_Contract')}</h2>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Title:
+                    {t('Title')}:
                     <input
                         type="text"
                         name="title"
@@ -46,7 +49,7 @@ const ContractForm = ({ onClose }) => {
                     />
                 </label>
                 <label>
-                    Description:
+                    {t('Description')}:
                     <textarea
                         name="description"
                         value={contract.description}
@@ -55,7 +58,7 @@ const ContractForm = ({ onClose }) => {
                     />
                 </label>
                 <label>
-                    Terms:
+                    {t('Terms')}:
                     <textarea
                         name="terms"
                         value={contract.terms}
@@ -64,7 +67,7 @@ const ContractForm = ({ onClose }) => {
                     />
                 </label>
                 <label>
-                    Start Date:
+                    {t('Start_Date')}:
                     <input
                         type="date"
                         name="startDate"
@@ -74,7 +77,7 @@ const ContractForm = ({ onClose }) => {
                     />
                 </label>
                 <label>
-                    End Date:
+                    {t('End_Date')}:
                     <input
                         type="date"
                         name="endDate"
@@ -84,7 +87,7 @@ const ContractForm = ({ onClose }) => {
                     />
                 </label>
                 <label>
-                    Amount:
+                    {t('Amount')}:
                     <input
                         type="number"
                         name="amount"
@@ -93,8 +96,8 @@ const ContractForm = ({ onClose }) => {
                         required
                     />
                 </label>
-                <button type="submit">Submit</button>
-                <button type="button" onClick={onClose}>Cancel</button>
+                <button type="submit">{t('Submit')}</button>
+                <button type="button" onClick={onClose}>{t('Cancel')}</button>
             </form>
         </div>
     );

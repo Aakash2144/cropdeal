@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'; // Assuming you're using axios for API calls
+import { useTranslation } from 'react-i18next';
+//import './History.css'; // CSS for styling the page
 
 const History = () => {
+    const { t } = useTranslation();
     const [cropHistory, setCropHistory] = useState([]);
     const [orderHistory, setOrderHistory] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -26,34 +29,34 @@ const History = () => {
     }, []);
 
     if (loading) {
-        return <p>Loading history...</p>;
+        return <p>{t('Loading_History')}</p>;
     }
 
     return (
         <div className="history-container">
-            <h2>Crop History</h2>
+            <h2>{t('Crop History')}</h2>
             <ul>
                 {cropHistory.length > 0 ? (
                     cropHistory.map((crop) => (
                         <li key={crop.id}>
-                            <strong>{crop.name}</strong> - Planted on: {new Date(crop.plantedDate).toLocaleDateString()}
+                            <strong>{crop.name}</strong> - {t('Planted On')}: {new Date(crop.plantedDate).toLocaleDateString()}
                         </li>
                     ))
                 ) : (
-                    <p>No crop history available.</p>
+                    <p>{t('No Crop History')}</p>
                 )}
             </ul>
 
-            <h2>Order History</h2>
+            <h2>{t('Order History')}</h2>
             <ul>
                 {orderHistory.length > 0 ? (
                     orderHistory.map((order) => (
                         <li key={order.id}>
-                            <strong>Order ID:</strong> {order.id} - Status: {order.status} - Total: {order.total} - Date: {new Date(order.date).toLocaleDateString()}
+                            <strong>{t('Order ID')}:</strong> {order.id} - {t('Status')}: {order.status} - {t('Total')}: {order.total} - {t('Date')}: {new Date(order.date).toLocaleDateString()}
                         </li>
                     ))
                 ) : (
-                    <p>No order history available.</p>
+                    <p>{t('No Order History')}</p>
                 )}
             </ul>
         </div>

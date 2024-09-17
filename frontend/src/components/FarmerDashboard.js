@@ -25,7 +25,7 @@ const FarmerDashboard = () => {
                     <li><Link to="/farmer-dashboard/orders">{t('orders')}</Link></li>
                     <li><Link to="/farmer-dashboard/history">{t('history')}</Link></li>
                     <li><Link to="/farmer-dashboard/profile">{t('profile')}</Link></li>
-                    <li><Link to="/farmer-dashboard/contract-form">{t('Create_contract')}</Link></li> {/* New Link */}
+                    <li><Link to="/farmer-dashboard/contract-form">{t('Create Contract')}</Link></li> {/* New Link */}
                 </ul>
 
                 {/* Language selector */}
