@@ -1,70 +1,127 @@
-/* FarmerHome.css */
-
+/* General Styles */
 .home-container {
     padding: 40px;
     text-align: center;
-    background-color: #f7f7f7;
+    background: linear-gradient(135deg, #d3e0e9 0%, #ffffff 100%); /* Gradient background */
     min-height: 100vh;
+    color: #333; /* Adjusted text color */
+    
 }
 
+/* Welcome Section */
 .welcome-section {
     margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
 }
 
 .welcome-section h1 {
-    font-size: 36px;
-    color: #28a745;
+    font-size: 40px;
+    color: #f0f8ff;
+    font-weight: 700;
+    margin: 0;
 }
 
 .welcome-section p {
-    font-size: 18px;
-    color: #666;
+    font-size: 20px;
+    color: #e0e0e0;
     margin-top: 10px;
 }
 
+/* Overview Section */
 .overview-section {
     display: flex;
     justify-content: space-around;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
+/* Card Styling */
 .overview-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 20px;
-    width: 250px;
+    width: 320px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid transparent; /* Placeholder border */
 }
+
+
 
 .overview-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .overview-card h2 {
-    font-size: 22px;
+    font-size: 26px;
     margin-bottom: 10px;
     color: #333;
 }
 
 .overview-card p {
-    font-size: 16px;
+    font-size: 18px;
     color: #555;
     margin-bottom: 20px;
 }
 
+/* Link Button */
 .overview-link {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 14px 24px;
     background-color: #28a745;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 18px;
 }
 
 .overview-link:hover {
     background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.overview-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Banners */
+.banner {
+    width: 100%;
+    height: 300px;
+    background: url('crop2.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.banner p {
+    font-size: 22px;
+    margin-top: 10px;
 }
