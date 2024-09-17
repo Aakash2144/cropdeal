@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import './Profile.css'; // For styling the page
 
 const Profile = () => {
+    const { t } = useTranslation(); // Destructure `t` for translations
     const [profile, setProfile] = useState({
         fullName: '',
         email: '',
@@ -12,20 +14,24 @@ const Profile = () => {
     });
 
     const [isEditing, setIsEditing] = useState(false);
+    const [isLoading, setIsLoading] = useState(true); // Loading state for fetch
+    const [error, setError] = useState(null); // Error state for handling errors
 
     // Fetch the farmer's profile data when the component loads
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                // Fetch farmer profile data (this is just a mock API, you can replace it)
                 const response = await axios.get('http://localhost:5000/api/farmer/profile');
                 setProfile(response.data);
             } catch (error) {
+                setError(t('errorFetchingProfile')); // Use translation for error messages
                 console.error('Error fetching profile:', error);
+            } finally {
+                setIsLoading(false); // Set loading to false after fetch
             }
         };
         fetchProfile();
-    }, []);
+    }, [t]); // Include `t` in dependencies
 
     // Handle input changes
     const handleChange = (e) => {
@@ -40,23 +46,27 @@ const Profile = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // Send updated profile data to the server
             await axios.put('http://localhost:5000/api/farmer/profile', profile);
-            setIsEditing(false); // Exit editing mode after submission
-            alert('Profile updated successfully!');
+            setIsEditing(false);
+            alert(t('errorUpdatingProfile')); // Use translation for success messages
         } catch (error) {
+            setError(t('errorUpdatingProfile')); // Use translation for error messages
             console.error('Error updating profile:', error);
-            alert('Failed to update profile.');
         }
     };
 
+    if (isLoading) {
+        return <p>{t('loadingProfile')}</p>; // Use translation for loading message
+    }
+
     return (
         <div className="profile-container">
-            <h2>Farmer Profile</h2>
+            <h2>{t('farmerProfile')}</h2>
+            {error && <p className="error-message">{error}</p>}
             {isEditing ? (
                 <form onSubmit={handleSubmit} className="profile-form">
                     <div className="form-group">
-                        <label>Full Name:</label>
+                        <label>{t('fullName')}:</label>
                         <input
                             type="text"
                             name="fullName"
@@ -66,7 +76,7 @@ const Profile = () => {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Email:</label>
+                        <label>{t('email')}:</label>
                         <input
                             type="email"
                             name="email"
@@ -76,7 +86,7 @@ const Profile = () => {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Phone:</label>
+                        <label>{t('phone')}:</label>
                         <input
                             type="text"
                             name="phone"
@@ -86,7 +96,7 @@ const Profile = () => {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Farm Location:</label>
+                        <label>{t('farmLocation')}:</label>
                         <input
                             type="text"
                             name="farmLocation"
@@ -96,25 +106,26 @@ const Profile = () => {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Farm Size (in acres):</label>
+                        <label>{t('farmSize')}:</label>
                         <input
                             type="number"
                             name="farmSize"
                             value={profile.farmSize}
                             onChange={handleChange}
                             required
+                            min="0"
                         />
                     </div>
-                    <button type="submit" className="save-button">Save</button>
+                    <button type="submit" className="save-button">{t('save')}</button>
                 </form>
             ) : (
                 <div className="profile-info">
-                    <p><strong>Full Name:</strong> {profile.fullName}</p>
-                    <p><strong>Email:</strong> {profile.email}</p>
-                    <p><strong>Phone:</strong> {profile.phone}</p>
-                    <p><strong>Farm Location:</strong> {profile.farmLocation}</p>
-                    <p><strong>Farm Size:</strong> {profile.farmSize} acres</p>
-                    <button onClick={() => setIsEditing(true)} className="edit-button">Edit Profile</button>
+                    <p><strong>{t('fullName')}:</strong> {profile.fullName}</p>
+                    <p><strong>{t('email')}:</strong> {profile.email}</p>
+                    <p><strong>{t('phone')}:</strong> {profile.phone}</p>
+                    <p><strong>{t('farmLocation')}:</strong> {profile.farmLocation}</p>
+                    <p><strong>{t('farmSize')}:</strong> {profile.farmSize} acres</p>
+                    <button onClick={() => setIsEditing(true)} className="edit-button">{t('Edit Profile')}</button>
                 </div>
             )}
         </div>

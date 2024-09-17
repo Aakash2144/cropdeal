@@ -9,5 +9,40 @@
         "orders": "आदेश",
         "history": "इतिहास",
         "profile": "प्रोफ़ाइल",
-       "Create_contract":"अनुबंध बनाएँ"
+        
+    
+            "overview": "यहां आपके खाते और हाल की गतिविधियों का अवलोकन है।",
+            "currentContracts": "वर्तमान अनुबंध",
+            "currentContractsDescription": "किसानों के साथ अपने चल रहे अनुबंधों को देखें और प्रबंधित करें।",
+            "paymentStatus": "भुगतान स्थिति",
+            "paymentStatusDescription": "अपने भुगतानों और लेनदेन की स्थिति की जांच करें।",
+            "marketInsights": "बाजार अंतर्दृष्टियाँ",
+            "marketInsightsDescription": "नवीनतम बाजार रुझानों और डेटा के साथ अपडेट रहें।",
+            "cropListings": "फसल सूचियाँ",
+            "cropListingsDescription": "अपनी फसल की सूचियों को प्रबंधित करें और विवरण अपडेट करें।",
+            "Your Orders": "आपके आदेश",
+
+                "No Current Orders": "कोई वर्तमान आदेश नहीं हैं।",
+                
+                
+                    "farmerProfile": "किसान प्रोफ़ाइल",
+                    "fullName": "पूरा नाम",
+                    "email": "ईमेल",
+                    "phone": "फोन",
+                    "farmLocation": "फार्म का स्थान",
+                    "farmSize": "फार्म का आकार (एकड़ में)",
+                    "save": "सहेजें",
+                    "Edit Profile": "प्रोफ़ाइल संपादित करें",
+                    "loadingProfile": "प्रोफ़ाइल लोड हो रही है...",
+                    "errorFetchingProfile": "प्रोफ़ाइल लाने में त्रुटि। कृपया बाद में पुनः प्रयास करें।",
+                    "errorUpdatingProfile": "प्रोफ़ाइल अपडेट करने में विफल। कृपया पुनः प्रयास करें।",
+                    "noCurrentOrders": "कोई वर्तमान आदेश नहीं हैं।"
+                  
+                  
+            
+              
+          
+          
+
+
 }

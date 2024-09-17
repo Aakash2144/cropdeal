@@ -9,6 +9,33 @@
         "orders": "ఆర్డర్లు",
         "history": "చరిత్ర",
         "profile": "ప్రొఫైల్",
-        "Create_contract":"ఒప్పందం"
+        "Create_contract":"ఒప్పందం",
+        "overview": "మీ ఖాతా మరియు తాజా కార్యకలాపాలపై సమీక్ష ఇక్కడ ఉంది.",
+            "currentContracts": "ప్రస్తుత ఒప్పందాలు",
+            "currentContractsDescription": "వ్యాపారులు తో మీ నడుస్తున్న ఒప్పందాలను వీక్షించండి మరియు నిర్వహించండి.",
+            "paymentStatus": "చెల్లింపు స్థితి",
+            "paymentStatusDescription": "మీ చెల్లింపులు మరియు లావాదేవీల స్థితిని తనిఖీ చేయండి.",
+            "marketInsights": "మార్కెట్ అవగాహన",
+            "marketInsightsDescription": "కొత్త మార్కెట్ ధోరణులు మరియు డేటాతో నవీకరించబడండి.",
+            "cropListings": "పంటల జాబితాలు",
+            "cropListingsDescription": "మీ పంటల జాబితాలను నిర్వహించండి మరియు వివరాలను నవీకరించండి.",
+          "Your Orders": "మీ ఆదేశాలు",
+          "No Current Orders":"ప్రస్తుత ఆదేశాలు లేవు.",
+          
+            "farmerProfile": "వ్యాధి ప్రొఫైల్",
+            "fullName": "పూర్తి పేరు",
+            "email": "ఇమెయిల్",
+            "phone": "ఫోన్",
+            "farmLocation": "ఫార్మ్ స్థానం",
+            "farmSize": "ఫార్మ్ పరిమాణం (ఎకరాల్లో)",
+            "save": "సేవ్",
+            "Edit Profile": "ప్రొఫైల్ సవరించండి",
+            "loadingProfile": "ప్రొఫైల్ లోడింగ్...",
+            "errorFetchingProfile": "ప్రొఫైల్ పొందడంలో లోపం. దయచేసి తిరిగి ప్రయత్నించండి.",
+            "errorUpdatingProfile": "ప్రొఫైల్‌ను అప్డేట్ చేయడంలో విఫలమైంది. దయచేసి తిరిగి ప్రయత్నించండి.",
+            "noCurrentOrders": "ప్రస్తుతం ఆదేశాలు లేవు."
+          
+          
+          
       
 }
